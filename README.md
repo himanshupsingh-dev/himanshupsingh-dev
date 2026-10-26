@@ -36,9 +36,27 @@ I've spent 4 years building full-stack web applications for **healthcare, IoT an
 Production website for a Bengaluru car-protection business. It includes service pages, tiered pricing, an interactive before/after image slider, an installation video gallery, FAQs, and a booking form that hands off to WhatsApp with details pre-filled.
 `Next.js` · `React` · `SEO` · [Live site](https://www.motormintautomotive.com/rodent-shield)
 
-### 🏘️ Apnahood
-_One-line description of what Apnahood does._
-`Your stack here` · [Live site](YOUR_APNAHOOD_URL)
+### 🏠 Apnahood: AI-powered flatmate finder
+A "Tinder for flatmates" for India's urban rental market (Bengaluru first). Users swipe through potential flatmates ranked by an **AI compatibility score**, match, and chat in real time. It's a feature-complete MVP running end to end across 5 services.
+
+**Highlights**
+- 🤖 **Conversational AI onboarding:** a chat assistant builds your profile in 10 questions, with no forms
+- 🧠 **AI matching & search:** pgvector embeddings for compatibility scoring, natural-language and semantic bio search, AI icebreakers, and a fraud/stock-photo classifier (scikit-learn)
+- 💬 **Real-time chat** with SignalR, plus match notifications and web push
+- 🔐 **Verified profiles & security:** OTP login, JWT with token revocation, log redaction, and a documented security audit
+- 💳 **Subscriptions** via Razorpay, with background jobs (Hangfire) for nudges and expiry
+- ⚙️ **Production setup:** Docker Compose, GitHub Actions CI for all 3 services, Sentry, and xUnit + pytest tests
+
+**By the numbers:** 72 REST endpoints · 19 DB tables · 17 screens · 8 AI endpoints
+
+**Stack**
+`Next.js 14` · `TypeScript` · `Tailwind` · `Zustand` · `ASP.NET Core 8` · `EF Core` · `SignalR` · `FastAPI` · `OpenAI` · `PostgreSQL + pgvector` · `Redis` · `Docker`
+
+```
+Next.js ──JWT──▶ ASP.NET Core API ──▶ PostgreSQL (pgvector) + Redis
+   └──SignalR chat──┘        └──▶ FastAPI AI service ──▶ OpenAI
+```
+_Private repo · screenshots coming soon_
 
 ### 💼 [AI-Powered Portfolio](https://github.com/himanshupsingh-dev/portfolio)
 Interactive portfolio with a live AI assistant (LLaMA 3.3 via a Cloudflare Worker proxy), a skills constellation, multiple themes, and canvas animations. Vanilla JS, no framework.
